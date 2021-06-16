@@ -7,12 +7,8 @@ from transformers import (
     BertForSequenceClassification,
     BertTokenizerFast,
     Trainer,
-    TrainingArguments,
-    RobertaTokenizer,
-    RobertaModel,
 )
 from nlp import load_dataset
-import torch
 import numpy as np
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import os

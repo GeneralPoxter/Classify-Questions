@@ -10,10 +10,9 @@ from transformers import (
     TrainingArguments,
 )
 from nlp import load_dataset
-import torch
-import numpy as np
-import random
 import os
+
+dirname = os.path.dirname(__file__)
 
 model = BertForSequenceClassification.from_pretrained("bert-base-cased")
 tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
@@ -32,7 +31,9 @@ def tokenize(batch):
 
 # Setup training dataset
 train_dataset = load_dataset(
-    "json", data_files={"train": "../data/qanta_train.json"}, field="questions"
+    "json",
+    data_files={"train": os.path.join(dirname, "../data/qanta_train.json")},
+    field="questions",
 )["train"]
 
 train_dataset = train_dataset.map(
@@ -64,4 +65,4 @@ trainer = Trainer(
 )
 
 trainer.train()
-model.save_pretrained("../models/bert-base-cased")
+model.save_pretrained(os.path.join(dirname, "../models/bert-base-cased"))
