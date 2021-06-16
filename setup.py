@@ -23,8 +23,7 @@ hs = [
 ]
 
 # Download qanta dataset
-dirname = os.path.dirname(__file__)
-if not os.path.isfile(os.path.join(dirname, "data/qanta.json")):
+if not os.path.isfile(os.path.join(os.path.dirname(__file__), "data/qanta.json")):
     print("Downloading data into data/qanta.json...")
     res = requests.get(
         "https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/qanta-jmlr-datasets/qanta.train.2018.04.18.json"
