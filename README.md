@@ -1,5 +1,5 @@
 # Classify Questions
-Trains and tests classification models on the QANTA question dataset.
+Trains and tests classification models on the QANTA question dataset. Models are trained to predict whether a given question is either college difficulty or high school difficulty.
 
 ## Usage
 1. ```pip install -r requirements.txt```
@@ -10,3 +10,5 @@ Trains and tests classification models on the QANTA question dataset.
     * DistilBERT (`distil-bert`)
     * ConvBERT (`conv-bert`)
     * ELECTRA (`electra`)
+
+    Run with ```--test-only``` flag if models are already trained
