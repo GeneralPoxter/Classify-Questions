@@ -1,6 +1,6 @@
 """
 Developer: Jason Liu
-Commnets: Based on setup code from Atith Gandhi
+Commnets: Based on code by Atith Gandhi
 """
 
 import json

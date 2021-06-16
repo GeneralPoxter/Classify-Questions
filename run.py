@@ -6,6 +6,8 @@ Comments: Testing and training script for classifiers
 from transformers import (
     BertForSequenceClassification,
     BertTokenizerFast,
+    AlbertForSequenceClassification,
+    AlbertTokenizerFast,
     ConvBertForSequenceClassification,
     ConvBertTokenizerFast,
     DistilBertForSequenceClassification,
@@ -28,15 +30,20 @@ classifiers = {
         "tokenizer": BertTokenizerFast,
         "src": "bert-base-cased",
     },
-    "conv-bert": {
-        "model": ConvBertForSequenceClassification,
-        "tokenizer": ConvBertTokenizerFast,
-        "src": "YituTech/conv-bert-base",
+    "albert": {
+        "model": AlbertForSequenceClassification,
+        "tokenizer": AlbertTokenizerFast,
+        "src": "albert-base-v2",
     },
     "distil-bert": {
         "model": DistilBertForSequenceClassification,
         "tokenizer": DistilBertTokenizerFast,
         "src": "distilbert-base-uncased",
+    },
+    "conv-bert": {
+        "model": ConvBertForSequenceClassification,
+        "tokenizer": ConvBertTokenizerFast,
+        "src": "YituTech/conv-bert-base",
     },
     "electra": {
         "model": ElectraForSequenceClassification,

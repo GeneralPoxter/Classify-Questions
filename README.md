@@ -7,6 +7,7 @@ Trains and tests classification models on the QANTA question dataset. Models are
 3. ```python run.py [classifiers to train and test]```
     ### Models included
     * BERT (`bert`)
+    * ALBERT (`albert`)
     * DistilBERT (`distil-bert`)
     * ConvBERT (`conv-bert`)
     * ELECTRA (`electra`)
